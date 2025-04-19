@@ -1,0 +1,134 @@
+
+/* fallback */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v143/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+  }
+
+
+.colors{
+    background-color: #f8f8f8;  /* sign btn */
+    background-color: #f2f2f2;  /* main color */
+    background-color: #fcfcfc;  /* numb btn */
+    background-color: #030303;  /* txt btn */
+    background-color: #91c1e5;  /* = btn */
+
+}
+
+a{
+    border: none !important;
+    color: inherit;
+}
+body{
+    display: flex;
+    background-color: #f2f2f2;
+    color: #030303;
+    cursor: default !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h3{
+    padding-right: 1px;
+}
+
+.align-items-center{
+    align-items: center;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.right{
+    padding-left: 20px;
+    float: right;
+    width: 180px;
+}
+.left{
+    float: left;
+    width: 80%;
+}
+.d-flex{
+    display: flex;
+    flex-flow: wrap;
+}
+.d-grid{
+    display: grid;
+}
+.dir-rtl{
+    direction: rtl;
+}
+.p-top{
+    padding-top: 22px;
+}
+.m-0{
+    margin: 0;
+}
+.p-l{
+    padding: 0 0 0 30px;
+}
+.up-sign{
+    font-size: 10px;
+    padding: 0 20px 10px;
+}
+.unavailable{
+    color: rgb(208, 208, 208);
+}
+.menu{
+    padding: 8px;
+    font-size: 0px;
+}
+.menu:hover{
+    background-color: #d9d9d9;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+  }
+.key-btn{
+    width: 100%;
+    height: 70%;
+}
+.sign-color{
+    background-color: #f8f8f8;    
+}
+.sign-color:hover{
+    background-color: #f2f2f2;    
+}
+.numb-color{
+    background-color: #fcfcfc;
+    font-weight: 600;
+}
+.numb-color:hover{
+    background-color: #f2f2f2;    
+}
+.btn1{
+    background-color: #91c1e5;
+}
+.btn1:hover{
+    background-color: #68abdc;
+}
+.keys{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 25%;
+    height: 30.98%;
+    border: 1px solid #f2f2f2;
+}
+.f-weight{
+    font-weight: 570;
+}
+.no-history{
+    margin-top: 25px;
+    font-size: 13px;
+}

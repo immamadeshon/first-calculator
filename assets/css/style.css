@@ -132,3 +132,8 @@ h3{
     margin-top: 25px;
     font-size: 13px;
 }
+
+.grid-sesction{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

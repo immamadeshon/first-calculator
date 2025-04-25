@@ -22,7 +22,8 @@ a{
     color: inherit;
 }
 body{
-    display: flex;
+    
+    height: 100%;
     background-color: #f2f2f2;
     color: #030303;
     cursor: default !important;
@@ -38,14 +39,26 @@ h3{
 .wrap{
     flex-wrap: wrap;
 }
+.top-menu{
+    grid-column-start: 1; /* شروع از خط عمودی اول */
+    grid-column-end: 4; /* پایان در خط عمودی سوم */
+    grid-row-start: 1; /* شروع از خط افقی اول */
+    grid-row-end: 2; /* پایان در خط افقی دوم */
+}
 .right{
-    padding-left: 20px;
-    float: right;
-    width: 180px;
+    padding-left: 15px;
+    grid-column-start: 3; /* شروع از خط عمودی اول */
+    grid-column-end: 4; /* پایان در خط عمودی سوم */
+    grid-row-start: 1; /* شروع از خط افقی اول */
+    grid-row-end: 4; /* پایان در خط افقی دوم */
+
 }
 .left{
-    float: left;
-    width: 80%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+
 }
 .d-flex{
     display: flex;
@@ -94,8 +107,9 @@ h3{
     direction: ltr;
   }
 .key-btn{
-    width: 100%;
-    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(6, 72px); 
 }
 .sign-color{
     background-color: #f8f8f8;    
@@ -121,8 +135,6 @@ h3{
     align-items: center;
     align-content: center;
     justify-content: center;
-    width: 25%;
-    height: 30.98%;
     border: 1px solid #f2f2f2;
 }
 .f-weight{
@@ -131,4 +143,8 @@ h3{
 .no-history{
     margin-top: 25px;
     font-size: 13px;
+}
+.grid-section{
+    display: grid;
+    grid-template-columns:  1fr 4fr 1fr;
 }

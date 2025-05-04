@@ -48,26 +48,25 @@ h3{
 .wrap{
     flex-wrap: wrap;
 }
-.top-menu{
-    grid-column-start: 1; /* شروع از خط عمودی اول */
-    grid-column-end: 4; /* پایان در خط عمودی سوم */
-    grid-row-start: 1; /* شروع از خط افقی اول */
-    grid-row-end: 2; /* پایان در خط افقی دوم */
+.top-menu {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
-.right{
+.right {
     padding-left: 15px;
-    grid-column-start: 3; /* شروع از خط عمودی اول */
-    grid-column-end: 4; /* پایان در خط عمودی سوم */
-    grid-row-start: 1; /* شروع از خط افقی اول */
-    grid-row-end: 4; /* پایان در خط افقی دوم */
-
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
-.left{
+.left {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
-    grid-row-end: 4;
-
+    grid-row-end: 3;
+    min-height: 100vh;
 }
 .d-flex{
     display: flex;
@@ -91,7 +90,7 @@ h3{
 .up-sign{
     cursor: pointer;
     font-size: 10px;
-    padding: 10px 22px;
+    padding: 13px 27px;
 }
 .up-sign:hover{
     color:  rgb(184, 181, 181);
@@ -114,6 +113,10 @@ h3{
 .menu:active{
     background-color: #d1d0d0;
 }
+.show-part{
+    font-size: 40px; 
+    margin: 10px 0;
+}
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -131,7 +134,7 @@ h3{
     cursor: pointer;
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
-    grid-template-rows: repeat(6, 71px); 
+    grid-template-rows: repeat(6, 13vh); 
 }
 .sign-color{
     background-color: #f8f8f8;    
@@ -177,5 +180,5 @@ h3{
 }
 .grid-section{
     display: grid;
-    grid-template-columns:  2fr 2fr 1fr;
+    grid-template-columns: 0fr 3fr 1fr;
 }

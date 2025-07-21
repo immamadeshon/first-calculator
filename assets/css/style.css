@@ -28,10 +28,17 @@ a {
 html,
 body {
   overflow: hidden;
+  min-width: 320px;
+  min-height: 400px;
+}
+@media (min-width: 768px) {
+  body{
+  overflow-y: auto !important;
+  overflow-x: auto !important;
+  }
 }
 body {
   margin: 0;
-  min-height: 100vh;
   background-color: #f2f2f2;
   color: #030303;
   cursor: default !important;
@@ -81,7 +88,6 @@ h3 {
     grid-column-end: 4 !important;
     grid-row-start: 2;
     grid-row-end: 3;
-    min-height: 100vh;
   }
 }
 .left {
@@ -89,7 +95,6 @@ h3 {
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-  min-height: 100vh;
 }
 .d-flex {
   display: flex;
@@ -136,16 +141,16 @@ h3 {
   padding: 8px;
   font-size: 0px;
 }
-.minimize-calc{
+.minimize-calc {
   padding: 0 35px;
 }
-.mini-his{
+.mini-his {
   padding-right: 0.6rem;
 }
-.his-img{
+.his-img {
   width: 20px;
 }
-.minimize-img{
+.minimize-img {
   width: 16px;
 }
 .menu:hover {
@@ -156,7 +161,7 @@ h3 {
 }
 .show-part {
   font-size: 40px;
-  margin: 10px 0;
+  margin: 27px 0;
   padding-right: 1rem;
   padding-top: 1rem;
 }
@@ -173,11 +178,27 @@ h3 {
   word-wrap: normal;
   direction: ltr;
 }
-.key-btn {
+.key-btn5 {
   cursor: pointer;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 13vh);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 15vh);
+}
+@media (max-width: 650px) {
+  .key-btn5 {
+  display: none;
+}
+}
+.key-btn6 {
+  display: none;
+}
+@media (max-width: 650px) {
+  .key-btn6 {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 13vh);
+  }
 }
 .sign-color {
   background-color: #f8f8f8;
@@ -199,13 +220,13 @@ h3 {
   background-color: #dfdfdf;
 }
 .btn1 {
-  background-color: #91c1e5;
+  background-color: #f8f8f8;
 }
 .btn1:hover {
-  background-color: #68abdc;
+  background-color: #91c1e5;
 }
 .btn1:active {
-  background-color: #589ac9;
+  background-color: #68abdc;
 }
 .keys {
   display: flex;

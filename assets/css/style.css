@@ -15,10 +15,10 @@
   background-color: #91c1e5; /* = btn */
 }
 *:hover {
-  transition: 300ms;
+  transition: 300ms ease;
 }
 *:active {
-  transition: 400ms;
+  transition: 400ms ease;
 }
 
 a {
@@ -122,6 +122,7 @@ h3 {
   padding: 0 0 0 30px;
 }
 .up-sign {
+  transition: 300ms ease;
   cursor: pointer;
   font-size: 10px;
   padding: 13px 24px;
@@ -137,6 +138,7 @@ h3 {
   cursor: default;
 }
 .menu {
+  transition: 300ms ease;
   cursor: pointer;
   padding: 8px;
   font-size: 0px;
@@ -161,11 +163,12 @@ h3 {
 }
 .show-part {
   font-size: 40px;
-  margin: 27px 0;
+  margin: 17px 0;
   padding-right: 1rem;
   padding-top: 1rem;
 }
 .material-icons {
+  transition: 300ms ease;
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
@@ -179,27 +182,67 @@ h3 {
   direction: ltr;
 }
 .key-btn5 {
+  transition: 300ms ease;
   cursor: pointer;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 15vh);
 }
-@media (max-width: 650px) {
-  .key-btn5 {
-  display: none;
+
+@media (max-width: 680px) {
+   .key-btn5 {
+  display: none !important;
 }
 }
-.key-btn6 {
-  display: none;
-}
-@media (max-width: 650px) {
   .key-btn6 {
+  display: none;
+}
+@media (max-width: 680px) {
+  .key-btn6 {
+    transition: 300ms ease;
     cursor: pointer;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 13vh);
   }
 }
+@media (min-height: 900px) {
+  .key-btn5 {
+  transition: 300ms ease;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 18vh) !important;
+}
+}
+@media (max-height: 600px) {
+  .key-btn5 {
+  transition: 300ms ease;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 13vh);
+}
+}
+@media (min-height: 900px) {
+  .key-btn6 {
+  transition: 300ms ease;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 15vh) !important;
+}
+}
+@media (max-height: 600px) {
+  .key-btn6 {
+  transition: 300ms ease;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 12vh);
+}
+}
+
 .sign-color {
   background-color: #f8f8f8;
 }
@@ -229,6 +272,7 @@ h3 {
   background-color: #68abdc;
 }
 .keys {
+  transition: 300ms ease;
   display: flex;
   align-items: center;
   align-content: center;
@@ -244,5 +288,15 @@ h3 {
 }
 .grid-section {
   display: grid;
+  flex-direction: column;
   grid-template-columns: 0fr 3fr 1fr;
+  min-height: 100vh;
+}
+@media (max-width: 650px){
+.grid-section {
+  display: grid;
+  flex-direction: column;
+  grid-template-rows: 1fr 17fr;
+  min-height: 100vh;
+}
 }

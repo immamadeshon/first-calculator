@@ -307,22 +307,26 @@ h3 {
 
 .sign-color-2 {
   background-color: #4b3adb;
+  border-radius: 2rem 0 2rem 0;
+  font-style: italic;
 }
 .sign-color-2:hover {
-  background-color: #4b3adb;
+  background-color: #6051e4;
 }
 .sign-color-2:active {
-  background-color: #4b3adb;
+  background-color: #1200b4;
 }
 .numb-color-2 {
   background-color: #8677fe;
   font-weight: 600;
+  border-radius: 2rem 0 2rem 0;
+  font-style: italic;
 }
 .numb-color-2:hover {
-  background-color: #8677fe;
+  background-color: #7563fc;
 }
 .numb-color-2:active {
-  background-color: #8677fe;
+  background-color: #6553f3;
 }
 
 
@@ -352,6 +356,14 @@ h3 {
   justify-content: center;
   border: 1px solid #f3f3f3;
 }
+/* .keys-2{
+    border-radius: 2rem 0 2rem 0;
+    font-style: italic;
+} 
+.keys-numb-2 {
+    border-radius: 2rem 0 2rem 0;
+    font-style: italic;
+} */
 .f-weight {
   font-weight: 570;
 }

@@ -327,6 +327,9 @@ h3 {
   justify-content: center;
   border: 1px solid #f3f3f3;
 }
+.keys.active {
+  background-color: var(--numb-color-active);
+}
 .keys-numb {
   transition: 300ms ease;
   display: flex;

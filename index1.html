@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Themeable Calculator - Demo</title>
+  <link rel="stylesheet" href="assets/css/style1.css" />
+</head>
+<body>
+  <main class="calculator-wrapper">
+    <header class="card header">
+      <h1 class="title">ماشین حساب</h1>
+    </header>
+
+    <!-- display -->
+    <section class="card display-area">
+      <div class="previous-display" id="previousDisplay"></div>
+      <div class="current-display" id="currentDisplay">0</div>
+    </section>
+
+    <!-- keys -->
+    <section class="card keypad">
+      <!-- memory + tabs -->
+      <div class="row memory-row">
+        <div class="memory-actions">
+          <button id="m-plus" class="mem-btn" data-mem="+">M+</button>
+          <button id="m-minus" class="mem-btn" data-mem="-">M−</button>
+          <button id="mr" class="mem-btn disabled" data-mem="recall">MR</button>
+          <button id="mc" class="mem-btn disabled" data-mem="clear">MC</button>
+        </div>
+
+        <div class="tabs">
+          <button id="history-tab" class="tab tab-active">History</button>
+          <button id="memory-tab" class="tab">Memory</button>
+        </div>
+      </div>
+
+      <!-- history & memory lists -->
+      <div class="card history-memory">
+        <ul id="history-list" class="history-list">
+          <li class="empty">There's no history yet</li>
+        </ul>
+
+        <ul id="memory-list" class="memory-list hidden">
+          <li class="empty">There's no memory yet</li>
+        </ul>
+      </div>
+
+      <!-- keys grid -->
+      <div class="keys-grid">
+        <!-- row: clear / delete / percent / divide -->
+        <div data-action class="keys control">
+          <button class="btn clear-btn" data-clear>AC</button>
+          <button class="btn clear-btn" data-delete>DEL</button>
+          <button class="btn" data-operator="percent">%</button>
+          <button class="btn" data-operator="divide">÷</button>
+        </div>
+
+        <!-- numbers and operators -->
+        <div class="keys numbers">
+          <div class="row">
+            <button class="btn" data-number="7">7</button>
+            <button class="btn" data-number="8">8</button>
+            <button class="btn" data-number="9">9</button>
+            <button class="btn" data-operator="multiply">×</button>
+          </div>
+          <div class="row">
+            <button class="btn" data-number="4">4</button>
+            <button class="btn" data-number="5">5</button>
+            <button class="btn" data-number="6">6</button>
+            <button class="btn" data-operator="subtract">−</button>
+          </div>
+          <div class="row">
+            <button class="btn" data-number="1">1</button>
+            <button class="btn" data-number="2">2</button>
+            <button class="btn" data-number="3">3</button>
+            <button class="btn" data-operator="add">+</button>
+          </div>
+          <div class="row">
+            <button class="btn" data-number="0">0</button>
+            <button class="btn" data-number=".">.</button>
+            <button id="plusminus" class="btn" data-action="negate">±</button>
+            <button id="equal" class="btn equal">=</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/script1.js"></script>
+</body>
+</html>

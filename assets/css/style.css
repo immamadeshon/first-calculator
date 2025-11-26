@@ -76,7 +76,10 @@
 *:active {
   transition: 400ms ease;
 }
-
+ul,li{
+  list-style: none;
+  padding: 0;
+}
 a {
   border: none !important;
   color: inherit;
@@ -178,14 +181,15 @@ h3 {
 .m-0 {
   margin: 0;
 }
-.p-l {
-  padding: 0 0 0 30px;
+.m-l {
+  margin: 0 0 0 30px;
 }
 .m-btns{
   align-items: center;
 }
 .up-sign {
-  transition: 300ms ease;
+  transition: border-color 300ms ease;
+  border: 1px solid transparent;
   cursor: pointer;
   font-size: 10px;
   padding: 11px 28px;
@@ -197,7 +201,7 @@ h3 {
 .up-sign:active {
   color: rgb(150, 147, 147);
 }
-.unavailable {
+.disabled {
   color: rgb(208, 208, 208) !important;
   cursor: default;
   border: none !important;
@@ -350,7 +354,6 @@ h3 {
   font-weight: 570;
 }
 .no-history {
-  margin-top: 25px;
   font-size: 13px;
 }
 .grid-section {
@@ -368,7 +371,23 @@ h3 {
   min-height: 100vh;
 }
 }
-.selector-border{
+.tab {
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.tab-active{
   border-bottom: 2px solid var(--btn-color);
   padding-bottom: 4px;
+}
+.history-list{
+  padding-top: 2rem;
+  padding-left: 1rem;
+}
+.hidden {
+  display: none;
+}
+.no-memory{
+  font-size: 13px;
 }

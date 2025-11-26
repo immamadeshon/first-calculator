@@ -16,15 +16,18 @@
     <!-- left side -->
     <div class="left">
         <div class="dir-rtl">
-            <h3 class="show-part">
+            <h3 class="show-part" id="currentDisplay">
                 0
+            </h3>
+            <h3 class="show-part" id="previousOperand">
+                
             </h3>
         </div>
         <div class="d-flex m-btns">
-            <div class="up-sign unavailable">MC</div>
-            <div class="up-sign unavailable">MR</div>
-            <div class="up-sign">M+</div>
-            <div class="up-sign">M-</div>
+            <div class="up-sign disabled" id="m-clear">MC</div>
+            <div class="up-sign disabled" id="m-recall">MR</div>
+            <div class="up-sign" id="m-plus">M+</div>
+            <div class="up-sign" id="m-minus">M-</div>
             <div class="up-sign">MS</div>
         </div>
         <div class="key-btn5">
@@ -110,7 +113,7 @@
             <div class="keys-numb numb-color" data-number="3">3</div>
             <div class="keys sign-color" style="font-weight: 500;font-size: 20px;" data-operator="add">+</div>
             <div class="keys sign-color">1/x</div>
-            <div class="keys sign-color">+/-</div>
+            <div class="keys sign-color" data-toggle="sign">+/-</div>
             <div class="keys-numb numb-color" data-number="0">0</div>
             <div class="keys sign-color" data-number="."><b>.</b></div>
             <div class="keys sign-color" style="font-weight: 500;font-size: 20px;" data-equal>=</div>
@@ -196,7 +199,7 @@
             <div class="keys-numb numb-color" data-number="2">2</div>
             <div class="keys-numb numb-color" data-number="3">3</div>
             <div class="keys sign-color" style="font-weight: 500;font-size: 20px;" data-operator="add">+</div>
-            <div class="keys-numb numb-color">+/-</div>
+            <div class="keys-numb numb-color" data-toggle="sign">+/-</div>
             <div class="keys-numb numb-color" data-number="0">0</div>
             <div class="keys-numb numb-color" data-number=".">.</div>
             <div class="keys sign-color" style="font-weight: 500;font-size: 20px;" data-equal>=</div>
@@ -208,11 +211,16 @@
     <div class="mini-his"><img class="his-img" src="assets/images/history-svgrepo-com.svg"></div>
     <div class="right">
         <div class="d-flex p-top">
-            <div class="selector f-weight selector-border">History</div>
-            <div class="p-l f-weight">Memory</div>
+            <div id="history-tab" class="tab tab-active selector f-weight">History</div>
+            <div id="memory-tab" class="tab m-l f-weight">Memory</div>
         </div>
-        <div>
-            <p class="no-history">There's no history yet</p>
+        <div class="history-list">
+            <ul id="history-list" class="no-history">
+                <li>There's no history yet</li>
+            </ul>
+            <ul id="memory-list" class="hidden">
+                <li class="no-memory">There's no memory yet</li>
+            </ul>
         </div>
     </div>
 

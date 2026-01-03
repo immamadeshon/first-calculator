@@ -1,0 +1,85 @@
+// نمایشگر ماشین حساب
+.show-part {
+  font-size: $font-size-display;
+  margin: 17px 0;
+  padding-right: 1rem;
+  padding-top: 1rem;
+}
+
+// تب‌ها
+.tab {
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  
+  &-active {
+    border-bottom: 2px solid var(--btn-color);
+  }
+}
+
+// لیست تاریخچه
+.history-list {
+  padding-top: 2rem;
+  padding-left: 1rem;
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .no-history, .no-memory {
+    font-size: $font-size-small;
+  }
+}
+
+// Up Signs (Memory buttons)
+.up-sign {
+  @include transition(border-color);
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 11px 28px;
+  
+  &:hover {
+    color: rgb(184, 181, 181);
+    border: 1px solid #dcdcdc;
+  }
+  
+  &:active {
+    color: rgb(150, 147, 147);
+  }
+  
+  &.disabled {
+    @include disabled-style();
+  }
+}
+
+// Menu
+.menu {
+  @include transition();
+  cursor: pointer;
+  padding: 8px;
+  font-size: 0px;
+  
+  &:hover {
+    background-color: $gray-medium;
+  }
+  
+  &:active {
+    background-color: darken($gray-medium, 5%);
+  }
+}
+
+.minimize-calc {
+  padding: 0 10px;
+}
+
+.his-img {
+  width: 20px;
+}
+
+.minimize-img {
+  width: 16px;
+}

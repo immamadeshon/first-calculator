@@ -41,15 +41,6 @@ let currentOperand = "";
 let previousOperand = "";
 let operator = null;
 
-function setActiveOperator(button) {
-  // حذف active از همه عملگرها
-  operatorButtons.forEach(btn => btn.classList.remove("active"));
-
-  // اضافه کردن active به دکمه انتخاب شده
-  if (button) {
-    button.classList.add("active");
-  }
-}
 
 function appendNumber(num) {
   if (num === '.' && currentOperand.includes('.'))return;
@@ -130,6 +121,16 @@ function clear() {
   updateDisplay();
 }
 
+function setActiveOperator(button) {
+  // حذف active از همه عملگرها
+  operatorButtons.forEach(btn => btn.classList.remove("active"));
+
+  // اضافه کردن active به دکمه انتخاب شده
+  if (button) {
+    button.classList.add("active");
+  }
+}
+
 
 //sign toggle
 
@@ -188,6 +189,13 @@ mmBtn.addEventListener("click", memorySubtract);
 mrBtn.addEventListener("click", memoryRecall);
 mcBtn.addEventListener("click", memoryClear);
 
+
+const historyTab = document.getElementById("history-tab");
+const memoryTab = document.getElementById("memory-tab");
+const historyList = document.getElementById("history-list");
+const memoryList = document.getElementById("memory-list"); 
+
+
 function updateHistoryUI() {
   // use the UL directly (historyList is from getElementById)
   if (history.length === 0) {
@@ -201,12 +209,6 @@ function updateHistoryUI() {
     historyList.classList.add('hidden');
   }
 }
-
-
-const historyTab = document.getElementById("history-tab");
-const memoryTab = document.getElementById("memory-tab");
-const historyList = document.getElementById("history-list");
-const memoryList = document.getElementById("memory-list");
 
 function updateMemoryUI() {
   if (memory.length === 0) {

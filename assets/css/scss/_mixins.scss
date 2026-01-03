@@ -1,0 +1,64 @@
+// میکسین برای media queries
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+// میکسین برای flexbox
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-flow: wrap;
+}
+
+// میکسین برای transition
+@mixin transition($property: all, $duration: $transition-fast) {
+  transition: $property $duration;
+}
+
+// میکسین برای hover و active
+@mixin button-states($hover-color, $active-color) {
+  &:hover {
+    background-color: $hover-color;
+  }
+  
+  &:active {
+    background-color: $active-color;
+  }
+}
+
+// میکسین برای disabled state
+@mixin disabled-style {
+  color: var(--disabled-color) !important;
+  cursor: default;
+  border: none !important;
+  pointer-events: none;
+}
+
+// میکسین برای grid
+@mixin grid-layout($columns, $rows, $gap: $grid-gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-template-rows: repeat($rows, 1fr);
+  gap: $gap;
+  cursor: pointer;
+  @include transition();
+}

@@ -1,0 +1,49 @@
+// متغیرهای اصلی تم
+:root {
+  // تم پیش‌فرض
+  --sign-btn-color: #f8f8f8;
+  --sign-color-hover: #d3d3d3;
+  --sign-color-active: #dbdbdb;
+  --main-color: #f2f2f2;
+  --numb-btn-color: #fcfcfc;
+  --numb-color-hover: #d3d3d3;
+  --numb-color-active: #dbdbdb;
+  --txt-btn-color: #030303;
+  --btn-color: #91c1e5;
+  --border-color: #f3f3f3;
+  --disabled-color: rgb(208, 208, 208);
+}
+
+// رنگ‌های اضافی
+$white: #fff;
+$black: #030303;
+$gray-light: #f2f2f2;
+$gray-medium: #d9d9d9;
+$gray-dark: #a0a0a0;
+
+// سایزها
+$calc-width: auto;
+$calc-padding: 0;
+$btn-size: 60px;
+$btn-margin: 0;
+$btn-border-radius: 0;
+$display-height: auto;
+
+// فونت‌ها
+$font-family: Arial, Helvetica, sans-serif;
+$font-size-base: 16px;
+$font-size-display: 40px;
+$font-size-small: 13px;
+
+// Breakpoints
+$breakpoint-mobile: 650px;
+$breakpoint-tablet: 880px;
+$breakpoint-desktop: 1024px;
+
+// انتقال‌ها
+$transition-fast: 300ms ease;
+$transition-medium: 400ms ease;
+$transition-slow: 500ms ease;
+
+// Grid
+$grid-gap: 0;

@@ -1,0 +1,44 @@
+// Import تمام بخش‌ها
+@import 'variables';
+@import 'mixins';
+@import 'themes';
+@import 'layout';
+@import 'display';
+@import 'buttons';
+
+// فونت Material Icons
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v143/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
+    format("woff2");
+}
+
+// استایل‌های عمومی
+ul, li {
+  list-style: none;
+  padding: 0;
+}
+
+h3 {
+  padding-right: 1px;
+}
+
+// Responsive Adjustments برای Keypads
+@include tablet {
+  .key-btn6 {
+    // تنظیمات ارتفاع برای tablet
+    @media (min-height: 900px) {
+      .keys, .keys-numb {
+        min-height: 15vh;
+      }
+    }
+    
+    @media (max-height: 600px) {
+      .keys, .keys-numb {
+        min-height: 12vh;
+      }
+    }
+  }
+}

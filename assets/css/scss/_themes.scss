@@ -1,0 +1,63 @@
+// تم سبز (theme1)
+.theme1 {
+  --sign-btn-color: #64c266;  
+  --sign-color-hover: #69b16b;
+  --sign-color-active: #5e9c5f;
+  --main-color: #f2f2f2;
+  --numb-btn-color: #7cd893;
+  --numb-color-hover: #7cd893;
+  --numb-color-active: #67bb7c;
+  --txt-btn-color: #030303;
+  --btn-color: #64c266;
+  
+  // اضافه کردن border-radius مخصوص theme1
+  .sign-color, .numb-color {
+    border-radius: 3rem 0;
+  }
+}
+
+// تم بنفش (theme2)
+.theme2 {
+  --sign-btn-color: #4b3adb;
+  --sign-color-hover: #6051e4;
+  --sign-color-active: #1200b4;
+  --main-color: #f2f2f2;
+  --numb-btn-color: #8677fe;
+  --numb-color-hover: #7563fc;
+  --numb-color-active: #6553f3;
+  --txt-btn-color: #030303;
+  --btn-color: #4b3adb;
+}
+
+// استایل‌های مشترک برای همه تم‌ها
+.sign-color {
+  background-color: var(--sign-btn-color);
+  color: var(--txt-btn-color);
+  
+  &:hover {
+    background-color: var(--sign-color-hover);
+  }
+  
+  &:active {
+    background-color: var(--sign-color-active);
+  }
+  
+  // حالت active برای عملگرها
+  &.active {
+    background-color: var(--numb-color-active);
+  }
+}
+
+.numb-color {
+  background-color: var(--numb-btn-color);
+  color: var(--txt-btn-color);
+  font-weight: 600;
+  
+  &:hover {
+    background-color: var(--numb-color-hover);
+  }
+  
+  &:active {
+    background-color: var(--numb-color-active);
+  }
+}
